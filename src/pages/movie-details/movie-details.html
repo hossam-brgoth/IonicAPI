@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ movie.title }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="unlikeMovie()" *ngIf="isLiked"><ion-icon name="thumbs-down"></ion-icon></button>
+      <button ion-button icon-only (click)="likeMovie()" *ngIf="!isLiked"><ion-icon name="thumbs-up"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      {{ movie.opening_crawl }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
